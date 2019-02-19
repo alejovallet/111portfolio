@@ -1,0 +1,131 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+a{
+    color:orange;
+} 
+    
+a:hover{
+    color: red;
+}
+
+/* ---- layout ---- */
+
+.main-header {
+
+}
+
+.main-footer {
+  color: white;
+  padding: 60px 0;
+  background: #111;
+}
+
+.container {
+  margin: 0 20px;
+  max-width: 960px;
+  border: 1px solid black;
+}
+
+section {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+section:nth-of-type(even){
+    background: rgb(218, 218, 218);
+}
+
+/* ---- components ---- */
+img:hover{
+    opacity: .6;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+}
+.inline-list p{
+    width: 200px;
+}
+
+/* --- header --- */
+.page-header h1{
+    font-size: 1em;
+}
+
+
+ 
+
+
+
+/* ---- section ---- */
+
+section#portfolio {
+
+}
+.page-header{
+    background: rgb(27, 9, 107);
+    color: white;
+    padding: 25%;
+    text-align: center;
+}
+
+.page-header a{
+    color: rgb(173, 18, 160);
+}
+ .page-header a:hover{
+     color: rgb(30, 221, 30);
+ }   
+
+ .inline-list li{
+     display: inline-block;
+ }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .page-header{
+        background: rgb(36, 2, 71);
+        color: rgb(37, 231, 231);
+
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container{
+      margin: 0 auto;
+  }
+  .page-header h1{
+    font-size: 2em;
+}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
