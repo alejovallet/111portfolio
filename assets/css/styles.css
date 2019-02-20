@@ -11,7 +11,7 @@ html {
 
 body {
   color: #111;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 147%;
 }
@@ -20,10 +20,17 @@ h1 {}
 
 h2 {}
 
-h3 {}
+h3 {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 2em;
+    padding: 30px 0;
+    text-align: center;
+
+}
 
 a{
     color:orange;
+    text-decoration: none;
 } 
     
 a:hover{
@@ -32,9 +39,6 @@ a:hover{
 
 /* ---- layout ---- */
 
-.main-header {
-
-}
 
 .main-footer {
   color: white;
@@ -58,6 +62,9 @@ section:nth-of-type(even){
 }
 
 /* ---- components ---- */
+img{
+    max-width: 100%;
+}
 img:hover{
     opacity: .6;
     -moz-box-shadow:    3px 3px 5px 6px #ccc;
@@ -68,34 +75,87 @@ img:hover{
     width: 200px;
 }
 
+
 /* --- header --- */
-.page-header h1{
-    font-size: 1em;
-}
 
-
- 
-
-
-
-/* ---- section ---- */
-
-section#portfolio {
-
-}
+/* el titular de la pagina (abajo) */
 .page-header{
     background: rgb(27, 9, 107);
     color: white;
-    padding: 25%;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+}
+/* Separar logo y texto del header (abajo) */
+.page-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-header h1{
+    font-size: 20px;
 }
 
 .page-header a{
-    color: rgb(173, 18, 160);
+    color: rgb(255, 249, 255);
+    padding: 5px 10px;
+    font-weight: 400;
 }
- .page-header a:hover{
-     color: rgb(30, 221, 30);
- }   
+
+.page-header a:hover{
+    color: rgb(30, 221, 30);
+}   
+ 
+/* --- banner --- */
+/* para tener una imagne de backgroun - las cuatro lineas que siguen tmb son para la imagen */
+.banner{
+    height: 100vh;
+    background: url(https://www.viajejet.com/wp-content/viajes/paisaje-marino-lago-jackson.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: rgb(211, 5, 218);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.banner h1{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 3em;
+    /* margin-bottom: 15px; */
+    line-height: 1.2em;
+
+}
+.banner h2{
+    font-size: 18px;
+}
+
+/* --- portfolio section --- */
+.flex-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-list li{
+    flex-basis: 100%;
+    position: relative;
+}
+.porfolio-title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ---- section ---- */
+
 
  .inline-list li{
      display: inline-block;
@@ -103,6 +163,7 @@ section#portfolio {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+    
 
 }
 
@@ -110,9 +171,18 @@ section#portfolio {
 @media (min-width: 768px) {
     .page-header{
         background: rgb(36, 2, 71);
-        color: rgb(37, 231, 231);
+        color: rgb(195, 255, 255);
 
+    }
+    .porfolio-list li{
+        width: 50%;
+    }
+    .flex-list li{
+        flex-basis: 50%;
+    }
+    .section-intro{
 
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -122,10 +192,13 @@ section#portfolio {
   }
   .page-header h1{
     font-size: 2em;
-}
+    }
+    .porfolio-list li{
+
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
-}
+} 
