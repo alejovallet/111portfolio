@@ -75,6 +75,29 @@ img:hover{
     width: 200px;
 }
 
+.btn{
+    display: inline-block;
+    background: orange;
+    padding: 2em;
+    color: white;
+    font-weight: 500;
+    border-radius: 4px;
+    margin: 25px;
+    transition: all .5s ease;
+    text-align: center;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+
+}
+
+.btn:hover{
+    background: black;
+    color: orange;
+    
+}
 
 /* --- header --- */
 
@@ -111,6 +134,8 @@ img:hover{
 
 .page-header a:hover{
     color: rgb(30, 221, 30);
+    transition: all .5s ease-in-out;
+
 }   
  
 /* --- banner --- */
@@ -133,8 +158,16 @@ img:hover{
     font-size: 3em;
     /* margin-bottom: 15px; */
     line-height: 1.2em;
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-delay: 1s;
 
 }
+/* .banner h1, .banner h2{
+    opacity: 1;
+    transition: opacity 2s ease-in;
+
+} */
 .banner h2{
     font-size: 18px;
 }
@@ -151,15 +184,57 @@ img:hover{
 .porfolio-title{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 50%; 
     transform: translate(-50%, -50%);
 }
 /* ---- section ---- */
 
+.foto1{
+    margin: 5px;
+}
+
+.foto2{
+    margin: 5px;
+}
 
  .inline-list li{
      display: inline-block;
  }
+ footer{
+     text-align:  center;
+     padding: 30px;
+ }
+
+ .container{
+    text-align:  center;
+    padding: 30px;
+
+ }
+ .section-intro{
+     margin: 20px;
+ }
+
+ .video{
+     display:flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .video-wrapper {
+    width: 100%;  
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -183,6 +258,7 @@ img:hover{
     .section-intro{
 
     }
+  
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -202,3 +278,30 @@ img:hover{
 @media (min-width: 1200px) {
 
 } 
+
+/* animation function */
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+      transform: scale(0.1);
+      opacity: 0; 
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 1; 
+
+    }
+    100% {
+        transform: scale(1); 
+
+    }
+}
